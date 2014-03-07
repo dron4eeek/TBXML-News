@@ -16,8 +16,6 @@
 #import "UIImageView+WebCache.h"
 #import "UIImage+ResizeMagick.h"
 
-#define DETAILED_VIEW_SEGUE @"DETAILED_VIEW_SEGUE"
-
 @interface TBMainViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -88,7 +86,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   TBNewsCell * cell = (TBNewsCell*)[tableView dequeueReusableCellWithIdentifier:@"TBNewsCell"];
-  //  cell.delegate = self;
   NewsItem *newsItem = [self.rssNews objectAtIndex:indexPath.row];
   [cell populateCellWithModel:newsItem];
   return cell;
@@ -101,12 +98,5 @@
   detailViewController.description = newsItem.description;
   [self.navigationController pushViewController:detailViewController animated:YES];
 }
-
-- (void)updateCellAfterImageDownloadedAtIndexPath:(NSIndexPath *)indexPath
-{
-  
-}
-
-
 
 @end

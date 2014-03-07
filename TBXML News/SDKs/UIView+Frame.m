@@ -7,6 +7,7 @@
 #import "UIView+Frame.h"
 
 @implementation UIView (Frame)
+
 -(void) setOrigin:(CGPoint)loc
 {
     CGRect rc = self.frame;

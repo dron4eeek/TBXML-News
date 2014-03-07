@@ -1,10 +1,4 @@
-//
-//  UIImage+ResizeMagick.m
-//
-//
-//  Created by Vlad Andersen on 1/5/13.
-//
-//
+
 
 #import "UIImage+ResizeMagick.h"
 

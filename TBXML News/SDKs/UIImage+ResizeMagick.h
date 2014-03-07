@@ -1,11 +1,3 @@
-//
-//  UIImage+ResizeMagick.h
-//
-//
-//  Created by Vlad Andersen on 1/5/13.
-//
-//
-
 
 
 @interface UIImage (ResizeMagick)
