@@ -13,7 +13,6 @@
 		9FA18E5818BD0FCD00CA5676 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FA18E5618BD0FCD00CA5676 /* InfoPlist.strings */; };
 		9FA18E5A18BD0FCD00CA5676 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA18E5918BD0FCD00CA5676 /* main.m */; };
 		9FA18E5E18BD0FCD00CA5676 /* TBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA18E5D18BD0FCD00CA5676 /* TBAppDelegate.m */; };
-		9FA18E6118BD0FCD00CA5676 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FA18E5F18BD0FCD00CA5676 /* Main.storyboard */; };
 		9FA18E6618BD0FCD00CA5676 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA18E6518BD0FCD00CA5676 /* Images.xcassets */; };
 		9FA18E6D18BD0FCD00CA5676 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA18E6C18BD0FCD00CA5676 /* XCTest.framework */; };
 		9FA18E6E18BD0FCD00CA5676 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA18E4D18BD0FCD00CA5676 /* Foundation.framework */; };
@@ -28,8 +27,8 @@
 		9FA18E9718BD120700CA5676 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA18E9618BD120700CA5676 /* libz.dylib */; };
 		9FA18E9C18BD125F00CA5676 /* TBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA18E9B18BD125F00CA5676 /* TBDetailViewController.m */; };
 		9FA18E9F18BD15D300CA5676 /* TBNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA18E9E18BD15D300CA5676 /* TBNewsCell.m */; };
-		9FA18EAA18BD171800CA5676 /* UIImage+ResizeMagick.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA18EA118BD171800CA5676 /* UIImage+ResizeMagick.m */; };
-		9FA18EAB18BD171800CA5676 /* UILabel+dynamicSizeMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA18EA318BD171800CA5676 /* UILabel+dynamicSizeMe.m */; };
+		9FA18EAA18BD171800CA5676 /* UIImage+ResizeMagick.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA18EA118BD171800CA5676 /* UIImage+ResizeMagick.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		9FA18EAB18BD171800CA5676 /* UILabel+dynamicSizeMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA18EA318BD171800CA5676 /* UILabel+dynamicSizeMe.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		9FA18EAC18BD171800CA5676 /* UITableViewCell+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA18EA518BD171800CA5676 /* UITableViewCell+Helpers.m */; };
 		9FA18EAD18BD171800CA5676 /* UIView+Attach.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA18EA718BD171800CA5676 /* UIView+Attach.m */; };
 		9FA18EAE18BD171800CA5676 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA18EA918BD171800CA5676 /* UIView+Frame.m */; };
@@ -47,6 +46,9 @@
 		9FA18ED818BD178C00CA5676 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA18EC818BD178C00CA5676 /* UIImage+MultiFormat.m */; };
 		9FA18ED918BD178C00CA5676 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA18ECA18BD178C00CA5676 /* UIImage+WebP.m */; };
 		9FA18EDA18BD178C00CA5676 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA18ECC18BD178C00CA5676 /* UIImageView+WebCache.m */; };
+		9FCEED0518CA52DB00E40DEC /* TBNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FCEED0418CA52DB00E40DEC /* TBNewsCell.xib */; };
+		9FCEED0718CA55B000E40DEC /* TBMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FCEED0618CA55B000E40DEC /* TBMainViewController.xib */; };
+		9FCEED0918CA560300E40DEC /* TBDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FCEED0818CA560300E40DEC /* TBDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +72,6 @@
 		9FA18E5B18BD0FCD00CA5676 /* TBXML News-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TBXML News-Prefix.pch"; sourceTree = "<group>"; };
 		9FA18E5C18BD0FCD00CA5676 /* TBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBAppDelegate.h; sourceTree = "<group>"; };
 		9FA18E5D18BD0FCD00CA5676 /* TBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBAppDelegate.m; sourceTree = "<group>"; };
-		9FA18E6018BD0FCD00CA5676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FA18E6518BD0FCD00CA5676 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9FA18E6B18BD0FCD00CA5676 /* TBXML NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TBXML NewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA18E6C18BD0FCD00CA5676 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -131,6 +132,9 @@
 		9FA18ECA18BD178C00CA5676 /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
 		9FA18ECB18BD178C00CA5676 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		9FA18ECC18BD178C00CA5676 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		9FCEED0418CA52DB00E40DEC /* TBNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBNewsCell.xib; sourceTree = "<group>"; };
+		9FCEED0618CA55B000E40DEC /* TBMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBMainViewController.xib; sourceTree = "<group>"; };
+		9FCEED0818CA560300E40DEC /* TBDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +198,6 @@
 			children = (
 				9FA18E5C18BD0FCD00CA5676 /* TBAppDelegate.h */,
 				9FA18E5D18BD0FCD00CA5676 /* TBAppDelegate.m */,
-				9FA18E5F18BD0FCD00CA5676 /* Main.storyboard */,
 				9FA18E6518BD0FCD00CA5676 /* Images.xcassets */,
 				9FA18E8418BD107A00CA5676 /* ViewControllers */,
 				9FA18E8218BD107A00CA5676 /* Models */,
@@ -296,8 +299,10 @@
 			children = (
 				9FA18E8518BD109500CA5676 /* TBMainViewController.h */,
 				9FA18E8618BD109500CA5676 /* TBMainViewController.m */,
+				9FCEED0618CA55B000E40DEC /* TBMainViewController.xib */,
 				9FA18E9D18BD15D300CA5676 /* TBNewsCell.h */,
 				9FA18E9E18BD15D300CA5676 /* TBNewsCell.m */,
+				9FCEED0418CA52DB00E40DEC /* TBNewsCell.xib */,
 			);
 			name = MainViewController;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 			children = (
 				9FA18E9A18BD125F00CA5676 /* TBDetailViewController.h */,
 				9FA18E9B18BD125F00CA5676 /* TBDetailViewController.m */,
+				9FCEED0818CA560300E40DEC /* TBDetailViewController.xib */,
 			);
 			name = DetailViewController;
 			sourceTree = "<group>";
@@ -426,7 +432,9 @@
 			files = (
 				9FA18E6618BD0FCD00CA5676 /* Images.xcassets in Resources */,
 				9FA18E5818BD0FCD00CA5676 /* InfoPlist.strings in Resources */,
-				9FA18E6118BD0FCD00CA5676 /* Main.storyboard in Resources */,
+				9FCEED0518CA52DB00E40DEC /* TBNewsCell.xib in Resources */,
+				9FCEED0718CA55B000E40DEC /* TBMainViewController.xib in Resources */,
+				9FCEED0918CA560300E40DEC /* TBDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,14 +509,6 @@
 				9FA18E5718BD0FCD00CA5676 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		9FA18E5F18BD0FCD00CA5676 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9FA18E6018BD0FCD00CA5676 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		9FA18E7518BD0FCD00CA5676 /* InfoPlist.strings */ = {
@@ -681,6 +681,7 @@
 				9FA18E7E18BD0FCD00CA5676 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9FA18E7F18BD0FCD00CA5676 /* Build configuration list for PBXNativeTarget "TBXML NewsTests" */ = {
 			isa = XCConfigurationList;
@@ -689,6 +690,7 @@
 				9FA18E8118BD0FCD00CA5676 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

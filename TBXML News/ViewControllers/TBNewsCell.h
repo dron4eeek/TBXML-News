@@ -9,8 +9,21 @@
 #import <UIKit/UIKit.h>
 
 @class NewsItem;
+
+@protocol TBNewsCellDelegate  <NSObject>
+
+@required
+- (void)updateCellAfterImageDownloadedAtIndexPath:(NSIndexPath*)indexPath;
+
+@end
+
+
 @interface TBNewsCell : UITableViewCell
 
-- (void)popilateCellWithModel:(NewsItem*)model;
+@property (nonatomic, strong) id <TBNewsCellDelegate> delegate;
+
+- (void)populateCellWithModel:(NewsItem*)model;
+- (float)populateCellForGetHeightWithModel:(NewsItem*)model;
+
 
 @end

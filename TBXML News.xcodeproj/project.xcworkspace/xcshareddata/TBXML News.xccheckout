@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>70A51ABB-B793-447E-84D2-6032056720A0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TBXML News</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C1065392-08CE-4544-A011-26D8A9A4E3EA</key>
+		<string>https://github.com/dron4eeek/TBXML-News.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TBXML News.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C1065392-08CE-4544-A011-26D8A9A4E3EA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dron4eeek/TBXML-News.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C1065392-08CE-4544-A011-26D8A9A4E3EA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C1065392-08CE-4544-A011-26D8A9A4E3EA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TBXML-News</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -12,10 +12,13 @@
 #import "APIDownload.h"
 #import "TBXML.h"
 #import "NewsItem.h"
+#import "SDWebImageManager.h"
+#import "UIImageView+WebCache.h"
+#import "UIImage+ResizeMagick.h"
 
 #define DETAILED_VIEW_SEGUE @"DETAILED_VIEW_SEGUE"
 
-@interface TBMainViewController ()
+@interface TBMainViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, retain) NSMutableArray *rssNews;
@@ -27,6 +30,10 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  
+  self.title = @"TBXML PARSING";
+  
+  [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([TBNewsCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TBNewsCell"];
   [APIDownload downloadWithURL:@"http://imaladec.com/rss.php" delegate:self];
 }
 
@@ -63,20 +70,7 @@
       }
     }
   }
-  
   [self.tableView reloadData];
-}
-
-- (void)didDownloadImage:(APIDownload*)request {
-  NewsItem *newsItem = [self.rssNews objectAtIndex:request.tag];
-  newsItem.image = [UIImage imageWithData:request.downloadData];
-  
-  [self.tableView reloadData];
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-  return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -84,48 +78,35 @@
   return [self.rssNews count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  TBNewsCell * cell = (TBNewsCell*)[tableView dequeueReusableCellWithIdentifier:@"TBNewsCell"];
+  NewsItem *newsItem = [self.rssNews objectAtIndex:indexPath.row];
+  return [cell populateCellForGetHeightWithModel:newsItem];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//  static NSString *CellIdentifier = @"Cell";
-  
-//  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//  if (cell == nil) {
-//    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-//                                  reuseIdentifier:CellIdentifier];
-//    cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
-//  }
-  TBNewsCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+  TBNewsCell * cell = (TBNewsCell*)[tableView dequeueReusableCellWithIdentifier:@"TBNewsCell"];
+  //  cell.delegate = self;
   NewsItem *newsItem = [self.rssNews objectAtIndex:indexPath.row];
-  [cell popilateCellWithModel:newsItem];
-//  cell.textLabel.text = newsItem.title;
-//  cell.detailTextLabel.text = newsItem.date;
-//  cell.imageView.image = newsItem.image;
-//  
-//  if (!cell.imageView.image)
-//  {
-//    APIDownload *request = [APIDownload downloadWithURL:newsItem.imageLink
-//                                               delegate:self
-//                                                    sel:@selector(didDownloadImage:)];
-//    request.tag = indexPath.row;
-//  }
-  
+  [cell populateCellWithModel:newsItem];
   return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   NewsItem *newsItem = [self.rssNews objectAtIndex:indexPath.row];
-  [self performSegueWithIdentifier:DETAILED_VIEW_SEGUE sender:newsItem];
+  TBDetailViewController *detailViewController = [TBDetailViewController new];
+  detailViewController.description = newsItem.description;
+  [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)updateCellAfterImageDownloadedAtIndexPath:(NSIndexPath *)indexPath
 {
-  if ([segue.identifier isEqualToString:DETAILED_VIEW_SEGUE])
-  {
-    TBDetailViewController *detailViewController = (TBDetailViewController*)segue.destinationViewController;
-    NewsItem * item = (NewsItem*)sender;
-    detailViewController.description = item.description;
-  }
+  
 }
+
+
 
 @end
